@@ -94,3 +94,9 @@ h4 {
 		font-size: 1rem;
 	}
 }
+
+img {
+	image-rendering: -webkit-optimize-contrast;
+	filter: blur(0);
+	transform: translateZ(0);
+}
