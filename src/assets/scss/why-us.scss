@@ -1,0 +1,51 @@
+@import "__variables";
+
+section#why-us {
+	.container {
+		display: block;
+		position: relative;
+
+		.items {
+			display: flex;
+			justify-content: space-between;
+			margin: 0 auto;
+			align-items: center;
+
+			@media only screen and (max-width: 445px) {
+				flex-direction: column;
+			}
+
+			.item {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				img {
+					max-height: 120px;
+					max-width: fit-content;
+					margin: 0 auto;
+				}
+				h4 {
+					font-weight: 550;
+					color: #000;
+				}
+			}
+		}
+
+		h3 {
+			font-weight: 500;
+			color: #000;
+			text-align: center;
+		}
+
+		h2 {
+			color: #000;
+			margin: 0 auto;
+			font-weight: 550;
+			margin-bottom: 25px;
+		}
+		p {
+			text-align: justify;
+		}
+	}
+}

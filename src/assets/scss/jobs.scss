@@ -1,0 +1,28 @@
+@import "__variables";
+
+section#jobs {
+	padding-top: 0;
+	.container {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		img {
+			width: 665px;
+			@media screen and (max-width: 560px) {
+				opacity: 0.2;
+			}
+		}
+
+		.default-btn {
+			font-weight: 550;
+			margin-left: -60px;
+
+			@media screen and (max-width: 560px) {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				margin-left: 0;
+			}
+		}
+	}
+}

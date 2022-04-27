@@ -1,0 +1,54 @@
+section#contact {
+	.container {
+		display: block;
+
+		h1 {
+			text-align: left;
+			font-size: 2.5rem;
+			color: #000;
+			margin-bottom: 10px;
+			font-weight: 500;
+		}
+
+		hr {
+			border-top: 5px solid #e5e5e5;
+			border-top-color: rgb(201 30 30);
+			margin-top: 5px;
+			margin-bottom: 35px;
+			max-width: 100%;
+			width: 350px;
+		}
+
+		ul.subcontainer {
+			display: flex;
+			flex-direction: column;
+			list-style-type: none;
+			width: fit-content;
+			max-width: 100%;
+			position: relative;
+			text-align: left;
+			margin: 0 auto;
+			padding: 0;
+
+			li {
+				display: flex;
+				padding: 10px 0;
+
+				a:hover {
+					text-decoration: none;
+				}
+			}
+
+			img:not(.map) {
+				filter: invert(1);
+				margin-right: 32px;
+				max-width: 25px;
+			}
+
+			.map {
+				width: 350px;
+				max-width: 100%;
+			}
+		}
+	}
+}

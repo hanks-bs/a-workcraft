@@ -1,0 +1,104 @@
+@use "sass:math";
+@import "__variables";
+
+$menu-height: 35px;
+$menu-width: 42px;
+$height: 22px;
+$width: 31px;
+$line-size: 4px;
+$line-color: #000;
+$to-translate: math.div($height - $line-size, 2);
+$bounce: cubic-bezier(0.87, -0.5, 0.19, 1.5);
+
+.menu {
+  position: relative;
+  right: 0;
+  height: 35px;
+  width: 42px;
+  background-color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid #fff;
+  margin-left: auto;
+  @media only screen and (min-width: 758px) {
+    display: none;
+  }
+
+  &__icon {
+    position: absolute;
+    width: $width;
+    height: $height;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    background-color: $line-color;
+    height: $line-size;
+    width: 100%;
+    pointer-events: none;
+
+    &--1 {
+      top: 0;
+    }
+
+    &--2 {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    &--3 {
+      bottom: 0;
+    }
+  }
+
+  /*--- Close Button 2 ---*/
+
+  &--close2 &__line--1 {
+    transition: transform 0.3s ease-in-out, top 0.2s ease-in-out 0.3s;
+  }
+
+  &--close2 &__line--1:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: $line-size;
+    background-color: $line-color;
+    transition: transform 0.1s ease-in-out 0.2s;
+  }
+
+  &--close2 &__line--2 {
+    transition: opacity 0s ease-in-out 0.3s;
+  }
+
+  &--close2 &__line--3 {
+    transition: opacity 0s ease-in-out 0.3s, bottom 0.2s ease-in-out 0.3s;
+  }
+
+  // Open
+  &--close2.open &__line--1 {
+    top: $to-translate;
+    transform: rotate(135deg);
+    transition: top 0.3s ease-in-out, transform 0.3s linear 0.3s;
+  }
+
+  &--close2.open &__line--1:before {
+    transform: rotate(90deg);
+    transition: transform 0.1s ease-in-out 0.3s;
+  }
+
+  &--close2.open &__line--2 {
+    opacity: 0;
+    transition: opacity 0s ease-in-out 0.3s;
+  }
+
+  &--close2.open &__line--3 {
+    bottom: $to-translate;
+    opacity: 0;
+    transition: bottom 0.3s ease-in-out, opacity 0s ease-in-out 0.3s;
+  }
+}

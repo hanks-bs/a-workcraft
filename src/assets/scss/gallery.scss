@@ -1,0 +1,44 @@
+section#gallery {
+	.container {
+		display: block;
+		text-align: left;
+
+		ul.uk-subnav-pill {
+			justify-content: center;
+
+			li.uk-active > a {
+				background-color: #000;
+			}
+		}
+		ul.photos {
+			display: flex;
+			list-style: none;
+			width: 100%;
+			flex-wrap: wrap;
+
+			li {
+				flex-basis: 25%;
+				padding: 20px;
+
+				@media only screen and (max-width: 805px) {
+					flex-basis: 50%;
+					padding: 20px 15px;
+				}
+
+				@media only screen and (max-width: 425px) {
+					flex-basis: 100%;
+					padding: 15px 0;
+				}
+			}
+		}
+
+		hr {
+			border-top: 5px solid #e5e5e5;
+			border-top-color: rgb(201 30 30);
+			margin-top: 5px;
+			margin-bottom: 35px;
+			max-width: 100%;
+			width: 350px;
+		}
+	}
+}

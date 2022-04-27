@@ -1,0 +1,88 @@
+@import "__variables";
+
+section#map {
+	padding-bottom: 0;
+	.container.head {
+		display: block;
+		h1 {
+			text-align: left;
+			font-size: 2.5rem;
+			color: #000;
+			margin-bottom: 10px;
+			font-weight: 500;
+		}
+
+		hr {
+			border-top: 5px solid #e5e5e5;
+			border-top-color: rgb(201 30 30);
+			margin-top: 5px;
+			margin-bottom: 35px;
+			max-width: 100%;
+			width: 350px;
+		}
+		p {
+			text-align: justify;
+		}
+
+		.default-btn {
+			font-weight: 550;
+			margin: 0 auto;
+		}
+	}
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: 622px) {
+			justify-content: center;
+		}
+		@media screen and (min-width: 622px) {
+			flex-wrap: nowrap;
+		}
+
+		.content {
+			width: 475px;
+
+			max-width: 100%;
+		}
+		.map {
+			text-align: center;
+		}
+
+		& > div {
+			padding: 15px 25px;
+		}
+
+		img {
+			width: 320px;
+			max-width: 100%;
+
+			@media screen and (max-width: 622px) {
+				position: absolute;
+				max-width: 100%;
+				left: 50%;
+				transform: translateX(-50%);
+				opacity: 0.2;
+			}
+		}
+
+		h2 {
+			color: #000;
+			position: relative;
+			width: 100%;
+			text-align: right;
+		}
+
+		hr {
+			border-top: 7px solid #e5e5e5;
+			border-top-color: rgb(201 30 30);
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		p {
+			text-align: right;
+		}
+	}
+}
